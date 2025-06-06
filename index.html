@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Brain Model with Camera Controls</title>
+</head>
+<body>
+
+  <div id="container">
+    <!-- 3D Brain Model section -->
+    <div style="flex-grow: 1;">
+      <!-- Load Three.js from CDN -->
+      <script src="https://unpkg.com/three@0.152.0/build/three.min.js"></script>
+
+      <!-- Load GLTFLoader from CDN -->
+      <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+
+      <!-- Load OrbitControls from CDN -->
+      <script src="https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js"></script>
+
+<div id="lobeControls">
+  <label><input type="checkbox" id="frontalCheck"> Frontal</label><br>
+  <label><input type="checkbox" id="occipitalCheck"> Occipital</label><br>
+  <label><input type="checkbox" id="temporalCheck"> Temporal</label><br>
+  <label><input type="checkbox" id="parietalCheck"> Parietal</label><br>
+  <button onclick="applyLobeSelection()">Done</button>
+</div>
+
+<script src="script.js"></script>
+    </div>
+
+    <!-- Chatbox section -->
+    <div id="chatbox">
+      <div id="chatMessages">
+        <p><strong>Bot:</strong> Hello! How can I assist you?</p>
+      </div>
+      <div id="chatInput">
+        <textarea id="inputText" placeholder="Type your message..."></textarea>
+        <button id="sendButton" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
